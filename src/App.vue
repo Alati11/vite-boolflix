@@ -1,11 +1,13 @@
 <script >
 
 import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue'
 
 
 export default {
   components: {
     AppHeader,
+    AppMain,
   }
 }
 </script>
@@ -16,6 +18,7 @@ export default {
 
 <template>
   <AppHeader />
+  <AppMain />
 
 </template>
 
@@ -24,6 +27,7 @@ export default {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    background-color: lightgrey;
 
 }
 
