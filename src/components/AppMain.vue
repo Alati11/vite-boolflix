@@ -1,17 +1,16 @@
 <script>
-import store from '../store';
-import AppCardMovie from './AppCardMovie.vue';
+import {store} from '../store';
+import CardMovie from './AppCardMovie.vue';
 
 export default {
     components: {
-        store,
-        AppCardMovie,
+        store: store,
+        CardMovie,
     },
     data() {
         return {
             title: 'AppMain',
-            message: 'Main',
-            
+            message: 'Main'
         }
     }
 }
@@ -23,7 +22,7 @@ export default {
         <p>Titolo</p>
         <p>Titolo originale</p>
         <P>Lingua</P>
-        <p>Voto</p>     
+        <p>Voti</p>     
     </div>
 </template>
 

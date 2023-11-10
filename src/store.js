@@ -2,6 +2,8 @@ import { reactive } from 'vue'
 
 export const store = reactive({
 	message: 'Booflix',
-	Movie: [],
+	Movies: [],
 	Series: [],
-})
+    searchText: [],
+    api_key: '68a3b6d5c53ee0854756fe7988888855',
+})  
