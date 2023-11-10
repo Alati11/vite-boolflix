@@ -1,10 +1,14 @@
 <script>
+import store from '../store';
 export default {
+    components: {
+        store,
+
+    },
     data() {
         return {
             title: 'AppHeader',
-            message: 'BOOLFLIX',
-            
+            message: 'BOOLFLIX',         
         }
     }
 }
@@ -37,9 +41,9 @@ export default {
     justify-content: space-between;
     align-items: center;
 }
-.header-input {
+/* .header-input {
 
-}
+} */
 
 
 
