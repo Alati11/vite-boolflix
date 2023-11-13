@@ -43,6 +43,7 @@ export default {
     min-width: 250px;
     font-size: 20px;
     border: none;
+    background-color: white;
 } 
 
 .search {

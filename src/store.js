@@ -2,10 +2,10 @@ import { reactive } from 'vue'
 
 export const store = reactive({
 	message: 'Booflix',
-	Movies: [],
-	Series: [],
+	movies: [],
+	series: [],
     searchText: '',
-    api_key: '68a3b6d5c53ee0854756fe7988888855',
+    API_KEY: '68a3b6d5c53ee0854756fe7988888855',
     flags: {
 		it: '/it.png',
 		en: '/en.jpg',

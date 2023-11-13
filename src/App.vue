@@ -47,11 +47,7 @@ export default {
 
 </template>
 
-<style>
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    background-color: lightgrey;
-}
+<style lang="scss">
+@use './style/general.scss'
+
 </style>

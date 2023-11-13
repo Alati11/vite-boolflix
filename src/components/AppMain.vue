@@ -1,16 +1,14 @@
 <script>
-import {store} from '../store';
-import CardMovie from './AppCardMovie.vue';
+import { store } from '../store';
+import AppCard from './AppCard.vue';
 
 export default {
     components: {
-        store: store,
-        CardMovie,
+        AppCard,
     },
     data() {
         return {
-            title: 'AppMain',
-            message: 'Main'
+            store: store,
         }
     }
 }
@@ -18,12 +16,29 @@ export default {
 </script>
 
 <template>
-    <div v-for="movie in store.movies" :key="movie.id">
-    {{ movie.title }}
-        
+    <h2 class="title">RISULTATI</h2>
+
+    <div class="grid">
+        <AppCard v-for="movie in store.movies" :key="movie.id" :item="movie" />
+
+        <!-- <div v-if="!store.movies.length">
+            Nessun film da mostrare
+        </div> -->
     </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 40px;
+}
+
+.title { 
+    padding: 20px;
+    text-align: center; 
+     
+}
 
 </style>
