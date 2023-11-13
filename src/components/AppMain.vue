@@ -20,6 +20,7 @@ export default {
 
     <div class="grid">
         <AppCard v-for="movie in store.movies" :key="movie.id" :item="movie" />
+        <AppCard v-for="serie in store.series" :key="serie.id" :item="serie" />
 
         <div v-if="!store.movies.length">
             <span class="text-result">Nessun risulatato da mostrare</span>

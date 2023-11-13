@@ -17,6 +17,9 @@ export default {
         srcFlag() {
             return this.store.flags[this.item.original_language]
         }
+    },
+    methods() {
+        
     }
 }
 </script>
@@ -34,6 +37,11 @@ export default {
                 <p v-else>{{ item.original_language }}</p>
             </li>
             <li>{{ item.vote_average }}</li>
+            
+                <font-awesome-icon icon="fa-solid fa-star"/>
+           
+
+
             <!-- <li>{{ item.poster_path }}</li> -->
         </ul>
     </div>
