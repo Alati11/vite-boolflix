@@ -32,7 +32,7 @@ export default {
 .grid {
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  gap: 40px;
+  gap: 10px;
 }
 
 .title { 
