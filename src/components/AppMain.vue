@@ -21,9 +21,9 @@ export default {
     <div class="grid">
         <AppCard v-for="movie in store.movies" :key="movie.id" :item="movie" />
 
-        <!-- <div v-if="!store.movies.length">
-            Nessun film da mostrare
-        </div> -->
+        <div v-if="!store.movies.length">
+            <span class="text-result">Nessun risulatato da mostrare</span>
+        </div>
     </div>
 </template>
 
@@ -38,7 +38,10 @@ export default {
 .title { 
     padding: 20px;
     text-align: center; 
-     
 }
-
+.text-result {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
 </style>

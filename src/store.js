@@ -12,4 +12,5 @@ export const store = reactive({
 		fr: '/fr.png',
 		es: '/es.png',
 	},
+    poster_path:'',
 })  

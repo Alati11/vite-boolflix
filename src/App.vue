@@ -28,7 +28,9 @@ export default {
         params: {
           api_key: this.store.API_KEY,
           query: this.store.searchText,
-          language: 'it-IT'
+          language: 'it-IT',
+          poster_path:'',
+        
         }
       }).then(res => {
         const movies = res.data.results
@@ -40,7 +42,9 @@ export default {
         params: {
           api_key: this.store.API_KEY,
           query: this.store.searchText,
-          language: 'it-IT'
+          language: 'it-IT',
+          poster_path:'',
+
         }
       }).then(res => {
         const series= res.data.results
