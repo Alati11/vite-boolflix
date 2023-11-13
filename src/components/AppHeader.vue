@@ -1,31 +1,25 @@
 <script>
 import {store} from '../store';
 export default {
-    components: {
-        store: store,
-
-    },
+   
     data() {
         return {
-            title: 'AppHeader',
-            message: 'BOOLFLIX', 
-            inputSearch: '',   
+            store: store,
+            
         }
     }
 }
-
 </script>
 
 <template>
     <div class="header-container">
         <div class="header-text">
-            {{ message }}
+            BOOTFLIX
         </div> 
         <div class="search">
-            <input class="header-input" type="text" placeholder=""
-                v-model="inputSearch"
+            <input class="header-input" type="text" placeholder="Cerca" @keyup.enter="$emit('search')"
+                v-model.trim="store.searchText"
             >
-            <button class="button-search">Cerca</button>
         </div>  
     </div>
     
@@ -46,16 +40,13 @@ export default {
     align-items: center;
 }
 .header-input {
-    height: 30px;
     min-width: 250px;
     font-size: 20px;
-
+    border: none;
 } 
 
 .search {
     margin-right: 80px;
-    border: none;
-    height: 30px;
 }
 
 .button-search {

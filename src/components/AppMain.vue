@@ -18,11 +18,9 @@ export default {
 </script>
 
 <template>
-    <div>
-        <p>Titolo</p>
-        <p>Titolo originale</p>
-        <P>Lingua</P>
-        <p>Voti</p>     
+    <div v-for="movie in store.movies" :key="movie.id">
+    {{ movie.title }}
+        
     </div>
 </template>
 

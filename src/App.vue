@@ -2,35 +2,39 @@
 
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue'
-import {store} from './store';
+import { store } from './store';
 import axios from 'axios';
 
 export default {
   components: {
     AppHeader,
-    AppMain,
-    store: store, 
+    AppMain,  
   },
   data() {
     return {
-      api_key: '68a3b6d5c53ee0854756fe7988888855',
-      query: '',
-
+      store: store,
     }
-
   },
   methods: {
     fecthMovies () {
+
+      if(this.store.searchText === '') {
+        store.movies = []
+        store.series = []
+        return
+      }
+
       axios.get('https://api.themoviedb.org/3/search/movie',{
         params: {
-          api_key: this.key,
-          query: this.query
-
+          api_key: this.store.API_KEY,
+          query: this.store.searchText,
+          language: 'it-IT'
         }
       }).then(res => {
+        const movies = res.data.results
+        this.store.movies = movies
         console.log(res.data.results)
       })
-
     }
   }
 }
@@ -38,7 +42,7 @@ export default {
 
 
 <template>
-  <AppHeader />
+  <AppHeader @search="fecthMovies" />
   <AppMain />
 
 </template>
@@ -49,7 +53,5 @@ export default {
     padding: 0px;
     box-sizing: border-box;
     background-color: lightgrey;
-
 }
-
 </style>
