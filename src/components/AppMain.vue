@@ -16,8 +16,7 @@ export default {
 </script>
 
 <template>
-    <h2 class="title">MOVIES</h2>
-
+        <h2 class="title">FILM</h2>
         <div class="grid">
             <AppCard v-for="movie in store.movies" :key="movie.id" :item="movie" />
 
@@ -26,9 +25,9 @@ export default {
             </div>
         </div>
       
-        <h2>TV</h2>
+        <h2 class="title"> SERIE TV</h2>
         <div class="grid">
-            <Card v-for="serie in store.series" :key="serie.id" :item="serie" />
+            <AppCard v-for="serie in store.series" :key="serie.id" :item="serie" />
 
             <div v-if="!store.series.length">
                 <span class="text-result">Nessuna serie tv da mostrare</span>
