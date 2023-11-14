@@ -18,29 +18,39 @@ export default {
 <template>
     <h2 class="title">MOVIES</h2>
 
-    <div class="grid">
-        <AppCard v-for="movie in store.movies" :key="movie.id" :item="movie" />
-        <AppCard v-for="serie in store.series" :key="serie.id" :item="serie" />
+        <div class="grid">
+            <AppCard v-for="movie in store.movies" :key="movie.id" :item="movie" />
 
-        <div v-if="!store.movies.length">
-            <span class="text-result">Nessun risultato da mostrare</span>
+            <div v-if="!store.movies.length">
+                <span class="text-result">Nessun film da mostrare</span>
+            </div>
         </div>
-    </div>
+      
+        <h2>TV</h2>
+        <div class="grid">
+            <Card v-for="serie in store.series" :key="serie.id" :item="serie" />
+
+            <div v-if="!store.series.length">
+                <span class="text-result">Nessuna serie tv da mostrare</span>
+            </div>
+        </div>
+
+   
 </template>
 
 <style lang="scss" scoped>
-
 .grid {
-  display: grid;
-  grid-template-columns: repeat(6,1fr);
-  gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
 }
 
-.title { 
+.title {
     padding: 20px;
-    text-align: center; 
+    text-align: center;
     color: white;
 }
+
 .text-result {
     text-align: center;
     color: white;
