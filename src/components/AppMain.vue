@@ -16,14 +16,14 @@ export default {
 </script>
 
 <template>
-    <h2 class="title">RISULTATI</h2>
+    <h2 class="title">MOVIES</h2>
 
     <div class="grid">
         <AppCard v-for="movie in store.movies" :key="movie.id" :item="movie" />
         <AppCard v-for="serie in store.series" :key="serie.id" :item="serie" />
 
         <div v-if="!store.movies.length">
-            <span class="text-result">Nessun risulatato da mostrare</span>
+            <span class="text-result">Nessun risultato da mostrare</span>
         </div>
     </div>
 </template>
@@ -32,13 +32,14 @@ export default {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 10px;
+  grid-template-columns: repeat(6,1fr);
+  gap: 5px;
 }
 
 .title { 
     padding: 20px;
     text-align: center; 
+    color: white;
 }
 .text-result {
     text-align: center;
