@@ -13,9 +13,19 @@ export default {
 
 <template>
     <div class="header-container">
-        <div class="header-text">
-            BOOTFLIX
+        <div class="header-menu">
+            <p class="header-text">BOOTFLIX</p>
+            <ul class="header-list">
+                <li class="header-list_style"><a href="#">Home</a></li>
+                <li class="header-list_style"><a href="#">Serie Tv</a></li>
+                <li class="header-list_style"><a href="#">Film</a></li>
+                <li class="header-list_style"><a href="#">Originali</a></li>
+                <li class="header-list_style"><a href="#">Aggiunti di recente</a></li>
+                <li class="header-list_style"><a href="#">La mia lista</a></li>
+            </ul>    
         </div> 
+       
+    
         <div class="search">
             <input class="header-input" type="text" placeholder="Cerca" @keyup.enter="$emit('search')"
                 v-model.trim="store.searchText"
@@ -32,7 +42,7 @@ export default {
     background-color: black;
     color: red;
     width: 100%;
-    height: 120px;
+    height: 80px;
     margin: 0px;
     padding: 0px;
     display: flex;
@@ -41,29 +51,40 @@ export default {
 }
 .header-input {
     min-width: 250px;
-    font-size: 20px;
+    font-size: 18px;
     border: none;
     background-color: white;
 } 
+.header-menu {
+    display: flex;
+    color: white;
+    justify-content: flex-start;
+    align-items: center;
+}
+.header-list {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+.header-list_style {
+    font-size: 18px;
+    padding: 5px;
 
+}
 .search {
-    margin-right: 80px;
+    margin-right: 30px;
 }
 
 .button-search {
 border: none;
 } 
-
 .header-text { 
-    margin-left: 80px;
+    margin-left: 30px;
+    margin-right: 20px;
     height: 40px;
     font-size: 40px;
-    background-color: black;
-
+    color: red;
 }
-
-
-
 </style>
 
 

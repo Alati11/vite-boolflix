@@ -64,6 +64,8 @@ export default {
     margin: 5px;
     color: white;
     border: 1px solid darkgrey;
+    max-height: 400px;
+    
 }
 
 .fas {

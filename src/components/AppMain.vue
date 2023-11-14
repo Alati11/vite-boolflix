@@ -16,6 +16,7 @@ export default {
 </script>
 
 <template>
+    <div class="container">
         <h2 class="title">FILM</h2>
         <div class="grid">
             <AppCard v-for="movie in store.movies" :key="movie.id" :item="movie" />
@@ -33,6 +34,8 @@ export default {
                 <span class="text-result">Nessuna serie tv da mostrare</span>
             </div>
         </div>
+    </div>
+   
 
    
 </template>
@@ -45,9 +48,11 @@ export default {
 }
 
 .title {
-    padding: 20px;
-    text-align: center;
+    font-size:35px;
+    text-align: left;
     color: white;
+    margin-top: 30px;
+    margin-left: 5px;
 }
 
 .text-result {
