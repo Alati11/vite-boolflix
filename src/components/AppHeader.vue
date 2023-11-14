@@ -32,7 +32,7 @@ export default {
             <a class="header-list_style" href="#"><font-awesome-icon :icon="['fas', 'magnifying-glass']" /></a>
             <a class="header-list_style" href="#">BAMBINI</a>
             <a class="header-list_style" href="#"><font-awesome-icon :icon="['fas', 'bell']" /></a>
-            <img height="25" src="/icon-netflix.png" alt="">
+            <img  class="img-net" height="25" src="/icon-netflix.png" alt="">
         </div>
     </div>
 </template>
@@ -83,6 +83,10 @@ border: none;
     height: 40px;
     font-size: 40px;
     color: red;
+}
+
+.img-net {
+    margin-left: 5px;
 }
 </style>
 
