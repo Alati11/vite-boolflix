@@ -56,8 +56,8 @@ export default {
 }
 
 .text-result {
-    text-align: center;
     color: white;
     font-size: 20px;
+    margin-left: 5px;
 }
 </style>

@@ -24,23 +24,23 @@ export default {
                 <li class="header-list_style"><a href="#">La mia lista</a></li>
             </ul>    
         </div> 
-       
     
         <div class="search">
             <input class="header-input" type="text" placeholder="Cerca" @keyup.enter="$emit('search')"
                 v-model.trim="store.searchText"
             >
-        </div>  
+            <a class="header-list_style" href="#"><font-awesome-icon :icon="['fas', 'magnifying-glass']" /></a>
+            <a class="header-list_style" href="#">BAMBINI</a>
+            <a class="header-list_style" href="#"><font-awesome-icon :icon="['fas', 'bell']" /></a>
+            <img height="25" src="/icon-netflix.png" alt="">
+        </div>
     </div>
-    
 </template>
 
 <style scoped>
-
-
 .header-container {
     background-color: black;
-    color: red;
+    color: darkgrey;
     width: 100%;
     height: 80px;
     margin: 0px;
@@ -50,14 +50,13 @@ export default {
     align-items: center;
 }
 .header-input {
-    min-width: 250px;
-    font-size: 18px;
+    min-width: 200px;
+    font-size: 16px;
     border: none;
     background-color: white;
 } 
 .header-menu {
     display: flex;
-    color: white;
     justify-content: flex-start;
     align-items: center;
 }
@@ -72,7 +71,7 @@ export default {
 
 }
 .search {
-    margin-right: 30px;
+    margin-right: 30px; 
 }
 
 .button-search {
